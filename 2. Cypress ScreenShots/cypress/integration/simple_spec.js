@@ -3,9 +3,10 @@ describe('Autenticación en Los estudiantes', function () {
     it('Login fallido', function () {
         
         cy.visit('https://losestudiantes.co')
-        cy.screenshot('Login_fallido_antes')
+       
         cy.contains('Cerrar').click()
         cy.contains('Ingresar').click()
+        cy.screenshot('Login_fallido_antes')
         cy.get('.cajaLogIn').find('input[name="correo"]').click().type("wrongemail@example.com")
         cy.get('.cajaLogIn').find('input[name="password"]').click().type("1234")
         cy.get('.cajaLogIn').contains('Ingresar').click()
@@ -17,9 +18,10 @@ describe('Autenticación en Los estudiantes', function () {
     it('Login correcto', function () {
         
         cy.visit('https://losestudiantes.co')
-        cy.screenshot('Login_correcto_antes')
+        
         cy.contains('Cerrar').click()
         cy.contains('Ingresar').click()
+        cy.screenshot('Login_correcto_antes')
         cy.get('.cajaLogIn').find('input[name="correo"]').click().type("vargaspintoadriana@gmail.com")
         cy.get('.cajaLogIn').find('input[name="password"]').click().type("Avargas1392*")
         cy.get('.cajaLogIn').contains('Ingresar').click()
@@ -32,9 +34,10 @@ describe('Autenticación en Los estudiantes', function () {
 describe('Registro en Los estudiantes', function () {
     it('Falla registro', function () {
         cy.visit('https://losestudiantes.co')
-        cy.screenshot('Registro_fallido_antes')
+       
         cy.contains('Cerrar').click()
         cy.contains('Ingresar').click()
+        cy.screenshot('Registro_fallido_antes')
         cy.get('.cajaSignUp > .loginForm').find('input[name="nombre"]').click().type("Adriana")
         cy.get('.cajaSignUp > .loginForm').find('input[name="apellido"]').click().type("Vargas")
         cy.get('.cajaSignUp > .loginForm').find('input[name="correo"]').click().type("varca.software@gmail.com")
