@@ -17,7 +17,6 @@ function limpiarPaleta() {
     areaTexto.value = textoInicial;
     for (let i = 1; i <= 5; i++) {
         var idDinamico = "color" + i;
-        asignarClase(idDinamico, "color-view");
         quitarEstilo(idDinamico);
     }
     document.body.removeAttribute("style");
@@ -27,11 +26,6 @@ function limpiarPaleta() {
         h2[i].removeAttribute("style");
     }
 
-}
-
-function asignarClase(elementId, clase) {
-
-    document.getElementById(elementId).className = clase;
 }
 
 function quitarEstilo(elementId) {
