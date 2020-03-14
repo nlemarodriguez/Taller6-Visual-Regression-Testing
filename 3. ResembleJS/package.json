@@ -1,0 +1,15 @@
+{
+  "name": "3.-resemblejs",
+  "version": "1.0.0",
+  "description": "Comparar imagenes",
+  "main": "index.js",
+  "dependencies": {
+    "resemblejs": "^3.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
