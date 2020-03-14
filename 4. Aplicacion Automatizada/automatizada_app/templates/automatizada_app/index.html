@@ -1,0 +1,54 @@
+<head>
+
+    {# Cargamos la librería #}
+    {% load bootstrap4 %}
+
+    {# CSS Bootstrap #}
+    {% bootstrap_css %}
+
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col m-3">
+                <a class="btn btn-success btn-lg btn-block" href="{% url 'agregar_reporte' %}">Generar Reporte</a>
+            </div>
+        </div>
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Imagen Base</th>
+                        <th scope="col">Imagen modificada</th>
+                        <th scope="col">Diferencias</th>
+                        <th scope="col">Informacion importante</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">fecha</th>
+                        <td class="w-25">
+                            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
+                                class="img-fluid img-thumbnail" alt="Sheep"></td>
+                        <td class="w-25"> <img
+                                src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
+                                class="img-fluid img-thumbnail" alt="Sheep"></td>
+                        <td class="w-25"> <img
+                                src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
+                                class="img-fluid img-thumbnail" alt="Sheep"></td>
+                        <td class="w-25">Texto</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    {# JS y jQuery Bootstrap #}
+    {% bootstrap_javascript jquery='full' %}
+</body>

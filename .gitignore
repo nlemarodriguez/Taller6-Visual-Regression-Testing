@@ -7,3 +7,6 @@ env/
 __init__.py
 __pycache__/
 /4. Aplicacion Automatizada/db.sqlite3
+/4. Aplicacion Automatizada/automatizada_app/cypress/node_modules
+/4. Aplicacion Automatizada/cypress/node_modules/*
+/4. Aplicacion Automatizada/automatizada_app/migrations/*
