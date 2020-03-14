@@ -2,3 +2,8 @@
 /3. ResembleJS/node_modules/.bin/*
 /3. ResembleJS/node_modules/*
 /3. ResembleJS/package-lock.json
+env/
+/.vscode/settings.json
+__init__.py
+__pycache__/
+/4. Aplicacion Automatizada/db.sqlite3
