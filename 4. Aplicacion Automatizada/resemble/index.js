@@ -13,8 +13,4 @@ function comparar(imagen1, imagen2, resultado) {
         return diff;
 }
 
-process.argv.forEach((val, index) => {
-    console.log(`${index}: ${val}`);
-  });
-
 comparar(process.argv[2],process.argv[3], process.argv[4])

@@ -10,7 +10,7 @@
 
 <body>
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col m-3">
@@ -33,15 +33,12 @@
                     {% for r in reportes %}
                     <tr>
                         <td scope="row">{{r.fecha}}</th>
-                        <td class="w-20">
-                            <img src="{{r.imagen_base.url}}" class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-20"> <img
-                                src="{{r.imagen_modificada.url}}"
-                                class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-20"> <img
-                                src="{{r.imagen_diferencias.url}}"
-                                class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-20">{{r.informacion}}</td>
+                        <td> <img src="{{r.imagen_base.url}}" class="img-fluid img-thumbnail"></td>
+                        <td> <img src="{{r.imagen_modificada.url}}" class="img-fluid img-thumbnail"></td>
+                        <td> <img src="{{r.imagen_diferencias.url}}" class="img-fluid img-thumbnail"></td>
+                        <td>
+                            <pre>{{r.informacion}}</pre>
+                        </td>
 
                     </tr>
 
