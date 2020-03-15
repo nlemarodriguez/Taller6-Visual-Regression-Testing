@@ -2,7 +2,7 @@ describe('Tomar pantallazos', function () {
 
     it('Pantallazo 1', function () {
         
-        cy.visit('http://192.168.56.1:8887/palette.html')
+        cy.visit('https://taller6-f91bb.firebaseapp.com/')
         cy.get('[onclick="generarPaleta()"]').click()
         cy.screenshot('pantallazo1')
        
@@ -10,7 +10,7 @@ describe('Tomar pantallazos', function () {
 
     it('Pantallazo 2', function () {
         
-        cy.visit('http://192.168.56.1:8887/palette.html')
+        cy.visit('https://taller6-f91bb.firebaseapp.com/')
         cy.get('[onclick="generarPaleta()"]').click()
         cy.screenshot('pantallazo2')
        
