@@ -30,20 +30,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for r in reportes %}
                     <tr>
-                        <th scope="row">fecha</th>
+                        <td scope="row">{{r.fecha}}</th>
                         <td class="w-25">
-                            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
+                            <img src="{{r.imagen_base.url}}" class="img-fluid img-thumbnail" alt="Sheep"></td>
+                        <td class="w-25"> <img
+                                src="{{r.imagen_modificada.url}}"
                                 class="img-fluid img-thumbnail" alt="Sheep"></td>
                         <td class="w-25"> <img
-                                src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
+                                src="{{r.imagen_modificada.url}}"
                                 class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-25"> <img
-                                src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg"
-                                class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-25">Texto</td>
+                        <td class="w-25">{{r.informacion}}</td>
 
                     </tr>
+
+                    {% endfor %}
+
                 </tbody>
             </table>
         </div>

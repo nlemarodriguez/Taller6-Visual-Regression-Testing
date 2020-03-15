@@ -10,3 +10,7 @@ __pycache__/
 /4. Aplicacion Automatizada/automatizada_app/cypress/node_modules
 /4. Aplicacion Automatizada/cypress/node_modules/*
 /4. Aplicacion Automatizada/automatizada_app/migrations/*
+node_modules/
+package-lock.json
+/4. Aplicacion Automatizada/cypress/cypress/videos/*
+/4. Aplicacion Automatizada/imagenes/*
