@@ -11,6 +11,9 @@ const textoInicial = `
 
 `;
 
+const cantidad = 5;
+const angulo = (360 / cantidad);
+
 function limpiarPaleta() {
 
     var areaTexto = document.getElementById("css-rules");
@@ -37,30 +40,35 @@ function generarPaleta() {
     var cajitas = document.querySelectorAll(".color-view");
 
     //Cambiar el fondo de la pagina
-    var colorFondo = RGBRandom();
+    var color_inicial = Math.floor(Math.random() * 360);
+    var colorFondo = RGBRandom(color_inicial);
     document.body.style.backgroundColor = colorFondo;
 
     //Cambiar el color del texto de los elementos
-    var colorTexto = RGBRandom();
+    color_inicial+= angulo;
+    var colorTexto = RGBRandom(color_inicial);
     for (i = 0; i < cajitas.length; i++) {
         cajitas[i].style.color = colorTexto;
     }
 
     //Cambiar el color del borde de los elementos
-    var colorBorde = RGBRandom();
+    color_inicial+= angulo;
+    var colorBorde = RGBRandom(color_inicial);
     for (i = 0; i < cajitas.length; i++) {
         cajitas[i].style.borderColor = colorBorde;
     }
 
     //Cambiar el color del fondo de los elementos
-    var colorFondoElementos = RGBRandom();
+    color_inicial+= angulo;
+    var colorFondoElementos = RGBRandom(color_inicial);
     for (i = 0; i < cajitas.length; i++) {
         cajitas[i].style.backgroundColor = colorFondoElementos;
     }
 
 
     //Cambiar el texto del encabezado
-    var colorH2 = RGBRandom();
+    color_inicial+= angulo;
+    var colorH2 = RGBRandom(color_inicial);
     var h2 = document.querySelectorAll("h2");
     for (i = 0; i < h2.length; i++) {
         h2[i].style.color = colorH2;
@@ -83,9 +91,10 @@ function generarPaleta() {
 
 }
 
-function RGBRandom() {
-    var r = Math.floor(Math.random() * 256);          // Random between 0-255
-    var g = Math.floor(Math.random() * 256);          // Random between 0-255
-    var b = Math.floor(Math.random() * 256);          // Random between 0-255
+function RGBRandom(color_inicial) {
+    var rgb = hslToRgb(color_inicial/359, 0.5, 0.5);
+    var r = rgb[0]
+    var g = rgb[1]
+    var b = rgb[2]
     return 'rgb(' + r + ',' + g + ',' + b + ')';
 }

@@ -33,15 +33,15 @@
                     {% for r in reportes %}
                     <tr>
                         <td scope="row">{{r.fecha}}</th>
-                        <td class="w-25">
+                        <td class="w-20">
                             <img src="{{r.imagen_base.url}}" class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-25"> <img
+                        <td class="w-20"> <img
                                 src="{{r.imagen_modificada.url}}"
                                 class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-25"> <img
-                                src="{{r.imagen_modificada.url}}"
+                        <td class="w-20"> <img
+                                src="{{r.imagen_diferencias.url}}"
                                 class="img-fluid img-thumbnail" alt="Sheep"></td>
-                        <td class="w-25">{{r.informacion}}</td>
+                        <td class="w-20">{{r.informacion}}</td>
 
                     </tr>
 

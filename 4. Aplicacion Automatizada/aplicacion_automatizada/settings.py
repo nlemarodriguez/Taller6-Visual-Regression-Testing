@@ -126,3 +126,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'imagenes')
 
 CYPRESS_PATH = 'C://Users//Nicolas Lema//Desktop//Miso uniandes - no version//Pruebas automaticas//Taller6-Visual-Regression-Testing//4. Aplicacion Automatizada//cypress'
 RUTA_IMAGENES = 'C://Users//Nicolas Lema//Desktop//Miso uniandes - no version//Pruebas automaticas//Taller6-Visual-Regression-Testing//4. Aplicacion Automatizada//imagenes'
+
+RESEMBLE_PATH = 'C://Users//Nicolas Lema//Desktop//Miso uniandes - no version//Pruebas automaticas//Taller6-Visual-Regression-Testing//4. Aplicacion Automatizada//resemble'
